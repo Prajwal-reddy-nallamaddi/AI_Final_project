@@ -51,22 +51,35 @@ For arc-consistency, we implement AC-3, which revises the domains of all variabl
 
 # Arc Consistency Algorithm :
 
-Consider the arcs in turn making each arc consistent.
-An arc 
+Time complexity O (n²d³)
 
-X, r(X, Y¯ )
-
-needs to be revisited if the domain of Y
-is reduced.
-Regardless of the order in which arcs are considered, we will
-terminate with the same result: an arc consistent network.
-Worst-case complexity of this procedure:
-let the max size of a variable domain be d
-let the number of constraints be e
-complexity is O(ed3
-)
-Some special cases are faster
-e.g., if the constraint graph is a tree, arc consistency is O(ed)
+function AC-3( csp) returns the CSP, possibly with reduced domains<br> inputs: csp, a binary CSP with variables (X₁, X₂, Xn}<br> local variables: queue, a queue of arcs, initially all the arcs in csp
+
+while queue is not empty do
+
+(X₁, X) REMOVE-FIRST(queue)
+
+if RM-INCONSISTENT-VALUES(X₁, X,) then
+
+  for each X, in NEIGHBORS[X] do
+
+    add (XE, X₁) to queue
+
+function RM-INCONSISTENT-VALUES (X₁, X,) returns true iff remove a value
+
+removed <- false
+
+ for each z in DOMAIN[X,] do
+
+   if value y in DOMAIN[X,] allows (z,y) to satisfy constraint(X,, X₁)
+   
+   then delete z from DOMAIN[X]; removed - true
+
+return removed
+
+CS 420: Artificial Intelligence
+
+36
 
 Sudoku test run Inputs: 003 010 560 320 054 203 206 450 012 045 040 100
 
