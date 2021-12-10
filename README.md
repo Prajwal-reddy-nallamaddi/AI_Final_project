@@ -17,7 +17,7 @@ The goal of this puzzle is to place the numbers 1...6 exactly once in each line,
 
 # Approach:
 
-A CSP is defined as<br>P =(V,D,C),where <br>• V = {V1,V2,...,Vn} is a set of n variables.<br> • D is a set of domains, one domain per variable. The domain DVi of variable Vi is a set of values that Vi can take. And, C is a set of constraints that apply to the variables. A constraint Ci that applies to a set of variables {Va, Vb, ..., Vk} (called the scope of the constraint) is a relation over the domains of these variables, and specifies the combination of values that the variables can take at the same time.
+A CSP is defined as<br>P =(V,D,C),where <br>• V = {V1,V2,...,Vn} is a set of n variables.<br> • D is a set of domains, one domain per variable. <br>The domain DVi of variable Vi is a set of values that Vi can take. And, C is a set of constraints that apply to the variables. A constraint Ci that applies to a set of variables {Va, Vb, ..., Vk} (called the scope of the constraint) is a relation over the domains of these variables, and specifies the combination of values that the variables can take at the same time.
 
 # Sudoku as CSP :
 
