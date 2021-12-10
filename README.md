@@ -39,14 +39,14 @@ Input Rules: Enter 36 inputs as we are dealing with 6 X 6 sudoku. Enter blank sp
 
 Enter the Sudoku grid : 003010560320054203206450012045040100
 
-Solved Sudoku Grid: 4 2 3 |5 1 6
-                    5 6 1 |3 2 4 
-                    ------+------ 
-                    1 5 4 |2 6 3 
-                    2 3 6 |4 5 1 
-                    ------+------ 
-                    3 1 2 |6 4 5 
-                    6 4 5 |1 3 2
+Solved Sudoku Grid:<br> 4 2 3 |5 1 6 <br>
+                    5 6 1 |3 2 4 <br>
+                    ------+------ <br>
+                    1 5 4 |2 6 3 <br>
+                    2 3 6 |4 5 1 <br>
+                    ------+------ <br>
+                    3 1 2 |6 4 5 <br>
+                    6 4 5 |1 3 2 <br>
 
 All constraint tests are passed.
 
