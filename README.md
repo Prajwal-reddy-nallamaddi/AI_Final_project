@@ -59,23 +59,23 @@ function AC-3( csp) returns the CSP, possibly with reduced domains<br>
 
 &nbsp  while queue is not empty do
 
-&nbsp&nbsp  (X₁, X) REMOVE-FIRST(queue)
+&nbsp&nbsp  (Xi, Xj) REMOVE-FIRST(queue)
 
-&nbsp&nbsp&nbsp  if RM-INCONSISTENT-VALUES(X₁, X,) then
+&nbsp&nbsp&nbsp  if RM-INCONSISTENT-VALUES(Xi, Xj) then
 
-  &nbsp&nbsp&nbsp&nbsp  for each X, in NEIGHBORS[X] do
+  &nbsp&nbsp&nbsp&nbsp  for each Xk, in NEIGHBORS[Xi] do
 
-    &nbsp&nbsp&nbsp&nbsp&nbsp  add (XE, X₁) to queue
+    &nbsp&nbsp&nbsp&nbsp&nbsp  add (Xk, Xi) to queue
 
-function RM-INCONSISTENT-VALUES (X₁, X,) returns true iff remove a value
+function RM-INCONSISTENT-VALUES (Xi, Xj) returns true iff remove a value
 
 &nbsp  removed <- false
 
- &nbsp&nbsp  for each z in DOMAIN[X,] do
+ &nbsp&nbsp  for each z in DOMAIN[Xi] do
 
-   &nbsp&nbsp&nbsp  if value y in DOMAIN[X,] allows (z,y) to satisfy constraint(X,, X₁)
+   &nbsp&nbsp&nbsp  if value y in DOMAIN[Xj] allows (z,y) to satisfy constraint(Xi, Xj)
    
-   &nbsp&nbsp&nbsp&nbsp  then delete z from DOMAIN[X]; removed - true
+   &nbsp&nbsp&nbsp&nbsp  then delete z from DOMAIN[Xi]; removed <- true
 
 &nbsp  return removed
 
