@@ -54,34 +54,31 @@ For arc-consistency, we implement AC-3, which revises the domains of all variabl
 Time complexity O (n²d³)
 
 function AC-3( csp) returns the CSP, possibly with reduced domains<br>
-&nbsp inputs: csp, a binary CSP with variables (X₁, X₂, Xn}<br> 
-&nbsp local variables: queue, a queue of arcs, initially all the arcs in csp
+&nbsp  inputs: csp, a binary CSP with variables (X₁, X₂, Xn}<br> 
+&nbsp  local variables: queue, a queue of arcs, initially all the arcs in csp
 
-&nbsp while queue is not empty do
+&nbsp  while queue is not empty do
 
-&nbsp&nbsp (X₁, X) REMOVE-FIRST(queue)
+&nbsp&nbsp  (X₁, X) REMOVE-FIRST(queue)
 
-&nbsp&nbsp&nbsp if RM-INCONSISTENT-VALUES(X₁, X,) then
+&nbsp&nbsp&nbsp  if RM-INCONSISTENT-VALUES(X₁, X,) then
 
-  &nbsp&nbsp&nbsp&nbsp for each X, in NEIGHBORS[X] do
+  &nbsp&nbsp&nbsp&nbsp  for each X, in NEIGHBORS[X] do
 
-    &nbsp&nbsp&nbsp&nbsp&nbsp add (XE, X₁) to queue
+    &nbsp&nbsp&nbsp&nbsp&nbsp  add (XE, X₁) to queue
 
 function RM-INCONSISTENT-VALUES (X₁, X,) returns true iff remove a value
 
-&nbsp removed <- false
+&nbsp  removed <- false
 
- &nbsp&nbsp for each z in DOMAIN[X,] do
+ &nbsp&nbsp  for each z in DOMAIN[X,] do
 
-   &nbsp&nbsp&nbsp if value y in DOMAIN[X,] allows (z,y) to satisfy constraint(X,, X₁)
+   &nbsp&nbsp&nbsp  if value y in DOMAIN[X,] allows (z,y) to satisfy constraint(X,, X₁)
    
-   &nbsp&nbsp&nbsp&nbsp then delete z from DOMAIN[X]; removed - true
+   &nbsp&nbsp&nbsp&nbsp  then delete z from DOMAIN[X]; removed - true
 
-&nbsp return removed
+&nbsp  return removed
 
-CS 420: Artificial Intelligence
-
-36
 
 Sudoku test run Inputs: 003 010 560 320 054 203 206 450 012 045 040 100
 
