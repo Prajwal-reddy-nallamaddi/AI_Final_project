@@ -31,7 +31,7 @@ For arc-consistency, we implement AC-3, which revises the domains of all variabl
 
 Sudoku test run Inputs: 003 010 560 320 054 203 206 450 012 045 040 100
 
-Results:
+# Results:
 
 (base) C:\Users\prajw\Downloads\AI Final Project(Sudoku Solver Using Arc Consistency)>python ArcConsistency.py
 
