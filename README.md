@@ -6,6 +6,26 @@ In particular:
         We study the modeling of the Sudoku puzzle as a Constraint Satisfaction Problem (CSP).
         We explore the design and use of CP techniques, both search and constraint propagation, for systematically solving the problem.
         We develop strategies grounded in CP to dynamically assist a human player solving a Sudoku puzzle.
+        
+# Binary Constraint Satisfaction Problem
+## Variables
+Variable for each tile in the sudoku grid with a total of 81 variables. Variable is a combination of a letter indicating the row, and a digit indicating the column.
+
+X = {X1, X2, ..., X81}
+
+## Domains
+Each variable Xi has the domain of the digits [1,9]
+
+D = {D1, D2, ..., D81}
+
+Di = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+## Constraints
+The value of each variable Xi cannot be equal to any value in its:
+
+Row
+Column
+Box
 
 ## What is sudoku?
 
@@ -28,6 +48,25 @@ We represent a n × m Sudoku as a CSP as follows: <br>• Each cell is a CSP var
 The basic operation in arc-consistency is to update the domain of a variable using the Revise operation. This operation revises the domain of one variable given the constraint that links the variable to another variable.
 
 For arc-consistency, we implement AC-3, which revises the domains of all variables until quiescence, revisiting variables that are connected to at least one variable whose domain has been modified.
+
+# Arc Consistency Algorithm :
+
+Consider the arcs in turn making each arc consistent.
+An arc 
+
+X, r(X, Y¯ )
+
+needs to be revisited if the domain of Y
+is reduced.
+Regardless of the order in which arcs are considered, we will
+terminate with the same result: an arc consistent network.
+Worst-case complexity of this procedure:
+let the max size of a variable domain be d
+let the number of constraints be e
+complexity is O(ed3
+)
+Some special cases are faster
+e.g., if the constraint graph is a tree, arc consistency is O(ed)
 
 Sudoku test run Inputs: 003 010 560 320 054 203 206 450 012 045 040 100
 
