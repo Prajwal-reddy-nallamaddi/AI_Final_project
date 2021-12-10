@@ -53,7 +53,7 @@ For arc-consistency, we implement AC-3, which revises the domains of all variabl
 
 Time complexity O (n²d³)
 
-function AC-3( csp) returns the CSP, possibly with reduced domains<br> inputs: csp, a binary CSP with variables (X₁, X₂, Xn}<br> local variables: queue, a queue of arcs, initially all the arcs in csp
+function AC-3( csp) returns the CSP, possibly with reduced domains<br>"\t"inputs: csp, a binary CSP with variables (X₁, X₂, Xn}<br> local variables: queue, a queue of arcs, initially all the arcs in csp
 
 while queue is not empty do
 
