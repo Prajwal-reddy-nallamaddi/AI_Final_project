@@ -11,12 +11,12 @@ In particular:
 ## Variables
 Variable for each tile in the sudoku grid with a total of 81 variables. Variable is a combination of a letter indicating the row, and a digit indicating the column.
 
-X = {X1, X2, ..., X81}
+X = {X1, X2, ..., X36}
 
 ## Domains
 Each variable Xi has the domain of the digits [1,9]
 
-D = {D1, D2, ..., D81}
+D = {D1, D2, ..., D36}
 
 Di = {1, 2, 3, 4, 5, 6, 7, 8, 9}
 
