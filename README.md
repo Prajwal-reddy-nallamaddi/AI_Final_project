@@ -9,16 +9,16 @@ In particular:
         
 # Binary Constraint Satisfaction Problem
 ## Variables
-Variable for each tile in the sudoku grid with a total of 81 variables. Variable is a combination of a letter indicating the row, and a digit indicating the column.
+Variable for each tile in the sudoku grid with a total of 36 variables. Variable is a combination of a letter indicating the row, and a digit indicating the column.
 
 X = {X1, X2, ..., X36}
 
 ## Domains
-Each variable Xi has the domain of the digits [1,9]
+Each variable Xi has the domain of the digits [1,6]
 
 D = {D1, D2, ..., D36}
 
-Di = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+Di = {1, 2, 3, 4, 5, 6}
 
 ## Constraints
 The value of each variable Xi cannot be equal to any value in its:
@@ -84,7 +84,7 @@ Sudoku test run Inputs: 003 010 560 320 054 203 206 450 012 045 040 100
 
 ## Results:
 
-(base) C:\Users\prajw\Downloads\AI Final Project(Sudoku Solver Using Arc Consistency)>python ArcConsistency.py
+(base) C:\Users\prajw\Desktop\AI Final Project(Sudoku Solver Using Arc Consistency)>python ArcConsistency.py
 
 Input Rules: Enter 36 inputs as we are dealing with 6 X 6 sudoku. Enter blank spaces with 0 or .
 
