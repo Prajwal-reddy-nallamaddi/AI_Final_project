@@ -1,5 +1,5 @@
 # Sudoku_solver
-# Objective:
+## Objective:
 
 In this project, we study the design and application of Constraint Processing (CP) techniques to solve the popular combinatorial game known as the Sudoku puzzle. 
 In particular:
@@ -7,7 +7,7 @@ In particular:
         We explore the design and use of CP techniques, both search and constraint propagation, for systematically solving the problem.
         We develop strategies grounded in CP to dynamically assist a human player solving a Sudoku puzzle.
 
-# What is sudoku?
+## What is sudoku?
 
 The Sudoku Puzzle was created by Howard Garns in 1979 and originally appeared in the Dell Pencil Puzzles and Word Games magazine. It is sometimes called Number Palace, which was its original name when first published.
 
@@ -15,15 +15,15 @@ This puzzle has 6 lines, 6 columns.
 
 The goal of this puzzle is to place the numbers 1...6 exactly once in each line, column, and block. Some numbers are already given in the cells. We will call these preassigned values.
 
-# Approach:
+## Approach:
 
 A CSP is defined as<br>P =(V,D,C),where <br>• V = {V1,V2,...,Vn} is a set of n variables.<br> • D is a set of domains, one domain per variable. <br>The domain DVi of variable Vi is a set of values that Vi can take. And, C is a set of constraints that apply to the variables. A constraint Ci that applies to a set of variables {Va, Vb, ..., Vk} (called the scope of the constraint) is a relation over the domains of these variables, and specifies the combination of values that the variables can take at the same time.
 
-# Sudoku as CSP :
+## Sudoku as CSP :
 
 We represent a n × m Sudoku as a CSP as follows: <br>• Each cell is a CSP variable. There are n2 × m2 variables. The domain of the cell is the set of values in the interval [1, (n × m)]. If there are n lines and m columns, then the puzzle will have n × m blocks, and there will be n blocks in a line and m lines of blocks. For example, n = 2 and m = 3 is a Sudoku where the variables can take the values [1,6].
 
-# Arc-consistency (AC):
+## Arc-consistency (AC):
 
 The basic operation in arc-consistency is to update the domain of a variable using the Revise operation. This operation revises the domain of one variable given the constraint that links the variable to another variable.
 
@@ -31,7 +31,7 @@ For arc-consistency, we implement AC-3, which revises the domains of all variabl
 
 Sudoku test run Inputs: 003 010 560 320 054 203 206 450 012 045 040 100
 
-# Results:
+## Results:
 
 (base) C:\Users\prajw\Downloads\AI Final Project(Sudoku Solver Using Arc Consistency)>python ArcConsistency.py
 
