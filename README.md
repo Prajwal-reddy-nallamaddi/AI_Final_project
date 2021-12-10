@@ -1,4 +1,4 @@
-# AI_Final_project
+# Sudoku_solver
 # Objective:
 
 In this project, we study the design and application of Constraint Processing (CP) techniques to solve the popular combinatorial game known as the Sudoku puzzle. 
