@@ -51,7 +51,7 @@ For arc-consistency, we implement AC-3, which revises the domains of all variabl
 
 # Arc Consistency Algorithm :
 
-<pre> Time complexity O (n²d³)
+<pre> 
 
 function AC-3( csp) returns the CSP, possibly with reduced domains<br>
 &nbsp  inputs: csp, a binary CSP with variables (X₁, X₂, Xn}<br> 
