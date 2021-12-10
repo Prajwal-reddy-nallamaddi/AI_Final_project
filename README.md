@@ -51,7 +51,7 @@ For arc-consistency, we implement AC-3, which revises the domains of all variabl
 
 # Arc Consistency Algorithm :
 
-Time complexity O (n²d³)
+<pre> Time complexity O (n²d³)
 
 function AC-3( csp) returns the CSP, possibly with reduced domains<br>
 &nbsp  inputs: csp, a binary CSP with variables (X₁, X₂, Xn}<br> 
@@ -79,7 +79,7 @@ function RM-INCONSISTENT-VALUES (X₁, X,) returns true iff remove a value
 
 &nbsp  return removed
 
-
+</pre>
 Sudoku test run Inputs: 003 010 560 320 054 203 206 450 012 045 040 100
 
 ## Results:
